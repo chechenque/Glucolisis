@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EjecutarComponent } from './component/ejecutar/ejecutar.component';
-
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Calculadora } from './_model/Calculadora';
 
 
 @NgModule({
@@ -9,10 +10,12 @@ import { EjecutarComponent } from './component/ejecutar/ejecutar.component';
     EjecutarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    EjecutarComponent
+    EjecutarComponent,
   ]
 })
 export class EjecutarModule { }

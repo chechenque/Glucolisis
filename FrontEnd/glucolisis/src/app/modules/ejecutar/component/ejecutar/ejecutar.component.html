@@ -1,1 +1,118 @@
-<p>ejecutar works!</p>
+<div class="mx-auto" >
+    <img src="../../../../../assets/glucolisis.jpg" class="center" style="width: 25vw; min-width: 800px;">
+    
+</div>
+<p><br></p>
+
+<form >
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Glucosas</label>
+      <input type="number" id="glucosas" class="form-control" placeholder="Moleculas de Glucosa"/>
+    </div>
+    <button (click)="ejecuta()" type="submit" class="btn btn-primary mb-3">Ejecutar</button>
+  </form>
+
+<div class="container">
+    <p style="text-align:center" > <font size="+1">Antes de la ejecución</font></p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">Atributo</th>
+                    <th class="text-center">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">Moleculas de Glucosa</td>
+                    <td class="text-center">{{variable.cal.glucosa}}</td>
+                </tr>
+
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">ATP Reactivos</td>
+                    <td class="text-center">{{variable.cal.atpr}}</td>
+                </tr>
+                
+
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">ADP Reactivos</td>
+                    <td class="text-center">{{variable.cal.adpr}}</td>
+                </tr>
+
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">NAD</td>
+                    <td class="text-center">{{variable.cal.nad}}</td>
+                </tr>
+
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">NADH</td>
+                    <td class="text-center">{{variable.cal.nadh}}</td>
+                </tr>
+
+                <tr *ngIf = "{cal} as variable">
+                    <td class="text-center">Piruvato</td>
+                    <td class="text-center">{{variable.cal.piruvato}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <p style="text-align:center" > <font size="+1">Despues de la ejecución</font></p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">Atributo</th>
+                    <th class="text-center">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">Moleculas de Glucosa</td>
+                    <td class="text-center">{{variable.aux.glucosa}}</td>
+                </tr>
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">ATP Reactivos</td>
+                    <td class="text-center">{{variable.aux.atpr}}</td>
+                </tr>
+                
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">ADP Reactivos</td>
+                    <td class="text-center">{{variable.aux.adpr}}</td>
+                </tr>
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">ATP</td>
+                    <td class="text-center">{{variable.aux.atp}}</td>
+                </tr>
+                
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">ADP</td>
+                    <td class="text-center">{{variable.aux.adp}}</td>
+                </tr>
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">NAD</td>
+                    <td class="text-center">{{variable.aux.nad}}</td>
+                </tr>
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">NADH</td>
+                    <td class="text-center">{{variable.aux.nadh}}</td>
+                </tr>
+
+                <tr *ngIf = "{aux} as variable">
+                    <td class="text-center">Piruvato</td>
+                    <td class="text-center">{{variable.aux.piruvato}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
